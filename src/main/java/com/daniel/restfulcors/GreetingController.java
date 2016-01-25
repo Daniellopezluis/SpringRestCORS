@@ -2,8 +2,6 @@ package com.daniel.restfulcors;
 
 import java.util.Random;
 
-import java.util.concurrent.atomic.AtomicLong;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,13 +12,13 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @Controller
 public class GreetingController {
 
-    private static final String template = " : %s!";
+    private static final String template = " : %s";
 
     @CrossOrigin(origins = "http://localhost:9000")
     @RequestMapping("/greeting")
     public @ResponseBody Greeting greeting(@RequestParam(required=false, defaultValue="La eterna brevedad del ser") String name) {
         System.out.println("==== saludando ====");
-        int x = randInt(0,5);
+        int x = randInt(0,4);
         return new Greeting(x, String.format(template, generarFrase(x)));
     }
 
@@ -33,7 +31,11 @@ public class GreetingController {
     }
     
     public String generarFrase(int x){
-    	String[] frases = {"Erase una vez", "Happy new year", "What is love?","En el bosque de la china","Alakazam"};
+    	String[] frases = {"All my life I thouth air was free... until I bought a bag of chips", 
+    			"Happy new year", 
+    			"What is love?",
+    			"En el bosque de la china",
+    			"Alakazam"};
     	return frases[x];
     }
 
