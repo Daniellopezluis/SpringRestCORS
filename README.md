@@ -1,6 +1,6 @@
 # SpringRestCORS
 
-First try of solving a challenge imposed by Epic Labs [Epic Labs](http://www.epiclabs.io/) team in order to asses my fitness for a web development role.
+First try of solving a challenge imposed by [Epic Labs](http://www.epiclabs.io/) team in order to asses my fitness for a web development role.
 
 The challenge consisted on creating a mock-up page of their previous web page, using Spring MVC alongside HTML, CSS and jQuery.
 
